@@ -12,6 +12,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -21,6 +25,7 @@
             font-family: "Poppins", sans-serif;
         }
 
+        /* ===== HERO ===== */
         #hero {
             height: 100vh;
             width: 100%;
@@ -40,6 +45,7 @@
             z-index: 10;
             text-align: center;
             top: 30%;
+            padding: 0 20px;
         }
 
         .name {
@@ -71,6 +77,7 @@
             font-size: 1.15rem;
         }
 
+        /* ===== SECTIONS ===== */
         .section {
             padding: 100px 12%;
             text-align: center;
@@ -83,6 +90,7 @@
             margin-bottom: 40px;
         }
 
+        /* ===== SKILLS ===== */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -105,6 +113,7 @@
             opacity: 0.8;
         }
 
+        /* ===== PROJECTS ===== */
         .projects {
             background: rgba(255, 255, 255, 0.02);
             padding: 100px 12%;
@@ -133,6 +142,7 @@
             text-decoration: underline;
         }
 
+        /* ===== EXPERIENCE ===== */
         .experience {
             max-width: 900px;
             margin: auto;
@@ -146,6 +156,7 @@
             backdrop-filter: blur(10px);
         }
 
+        /* ===== CONTACT ===== */
         .contact {
             padding: 100px 12%;
             text-align: center;
@@ -154,6 +165,64 @@
         .contact-info {
             font-size: 1.25rem;
             line-height: 2;
+        }
+
+        .contact a {
+            color: #00eaff;
+            text-decoration: none;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+
+            .hero-content {
+                top: 22%;
+            }
+
+            .name {
+                font-size: 2.4rem;
+                letter-spacing: 2px;
+            }
+
+            .role {
+                font-size: 1.1rem;
+            }
+
+            .description {
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            .section,
+            .projects,
+            .contact {
+                padding: 70px 6%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects li,
+            .exp-item {
+                font-size: 0.95rem;
+                padding: 16px;
+            }
+
+            .contact-info {
+                font-size: 1.05rem;
+                word-break: break-word;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                top: 20%;
+            }
         }
     </style>
 </head>
@@ -176,7 +245,7 @@
         </div>
     </div>
 
-    <!-- SOBRE MIM -->
+    <!-- SOBRE -->
     <section class="section">
         <h2 class="section-title">Sobre mim</h2>
         <p>
@@ -188,7 +257,7 @@
     </section>
 
     <!-- HABILIDADES -->
-    <section class="section skills">
+    <section class="section">
         <h2 class="section-title">Habilidades</h2>
 
         <div class="skills-grid">
@@ -196,27 +265,22 @@
                 <h3>Front-end</h3>
                 <p>HTML5, CSS3, JavaScript ES6+, responsividade, animações e acessibilidade.</p>
             </div>
-
             <div class="skill-box">
                 <h3>3D & Visual</h3>
                 <p>Three.js, WebGL, partículas, luzes, shaders e animações imersivas.</p>
             </div>
-
             <div class="skill-box">
                 <h3>Back-end</h3>
                 <p>Node.js, Express, APIs REST, autenticação e integrações.</p>
             </div>
-
             <div class="skill-box">
                 <h3>Ferramentas</h3>
                 <p>VS Code, Git, GitHub, Postman, Figma, Insomnia.</p>
             </div>
-
             <div class="skill-box">
                 <h3>Soft Skills</h3>
                 <p>Comunicação, liderança, trabalho em equipe e visão de produto.</p>
             </div>
-
             <div class="skill-box">
                 <h3>Arquitetura</h3>
                 <p>Componentização, padrões, modularização, clean code.</p>
@@ -227,23 +291,19 @@
     <!-- PROJETOS -->
     <section class="projects">
         <h2 class="section-title">Projetos</h2>
-
         <ul>
             <li>
                 <strong>🌐 Website Institucional Premium</strong><br>
                 <a class="proj-link" href="https://www.vedacoeslaranjeias.com.br/" target="_blank">Acessar projeto →</a>
             </li>
-
             <li>
                 <strong>📊 Dashboard Interativo com Gráficos</strong><br>
-                <a class="proj-link" href="https://drive.google.com/drive/folders/1z6evx70bhhS2VjjHK71aK5bJ_WzVhu7f?usp=drive_link" target="_blank">Acessar projeto →</a>
+                <a class="proj-link" href="https://drive.google.com/drive/folders/1z6evx70bhhS2VjjHK71aK5bJ_WzVhu7f" target="_blank">Acessar projeto →</a>
             </li>
-
             <li>
                 <strong>🎮 Calculadora</strong><br>
-                <a class="proj-link" href="https://www.linkedin.com/posts/victor-hugo-ozim-e-sousa-b954a420a_ainda-que-a-simplicidade-esteja-presente-activity-7195943343070105600-z87H?utm_source=share&utm_medium=member_desktop&rcm=ACoAADUcG6EBw1QOLVYpjhkRThffSqkORIN3xmc" target="_blank">Acessar projeto →</a>
+                <a class="proj-link" href="https://www.linkedin.com/" target="_blank">Acessar projeto →</a>
             </li>
-
             <li>
                 <strong>📱 Convite de Aniversário</strong><br>
                 <a class="proj-link" href="https://ve-c-tor.github.io/Anivers-rio-Matheus/" target="_blank">Acessar projeto →</a>
@@ -273,36 +333,18 @@
 
     <!-- CONTATO -->
     <section class="contact">
-    <h2 class="section-title">Contato</h2>
+        <h2 class="section-title">Contato</h2>
+        <p class="contact-info">
+            ✉ <a href="mailto:victorhugoozimesousa8@gmail.com">victorhugoozimesousa8@gmail.com</a><br>
+            💼 <a href="https://www.linkedin.com/in/victor-hugo-ozim-e-sousa-b954a420a/" target="_blank">LinkedIn</a><br>
+            🧑‍💻 <a href="https://github.com/ve-c-tor" target="_blank">GitHub</a>
+        </p>
+    </section>
 
-    <p class="contact-info">
-        ✉ E-mail:
-        <strong>
-            <a href="mailto:victorhugoozimesousa8@gmail.com">
-                victorhugoozimesousa8@gmail.com
-            </a>
-        </strong><br>
-
-        💼 LinkedIn:
-        <strong>
-            <a href="https://www.linkedin.com/in/victor-hugo-ozim-e-sousa-b954a420a/" target="_blank">
-                linkedin.com/in/victor-hugo-ozim
-            </a>
-        </strong><br>
-
-        🧑‍💻 GitHub:
-        <strong>
-            <a href="https://github.com/ve-c-tor" target="_blank">
-                github.com/ve-c-tor
-            </a>
-        </strong>
-    </p>
-</section>
-
-
-    <!-- SCRIPT 3D -->
+    <!-- THREE JS -->
     <script>
         const scene = new THREE.Scene();
+
         const camera = new THREE.PerspectiveCamera(
             75,
             window.innerWidth / window.innerHeight,
@@ -312,11 +354,15 @@
 
         const renderer = new THREE.WebGLRenderer({
             canvas: document.getElementById("bg"),
+            alpha: true
         });
-        renderer.setPixelRatio(window.devicePixelRatio);
+
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(window.innerWidth, window.innerHeight);
 
-        const particlesCount = 2400;
+        const isMobile = window.innerWidth < 768;
+        const particlesCount = isMobile ? 1200 : 2400;
+
         const geometry = new THREE.BufferGeometry();
         const positions = new Float32Array(particlesCount * 3);
 
@@ -324,10 +370,7 @@
             positions[i] = (Math.random() - 0.5) * 16;
         }
 
-        geometry.setAttribute(
-            "position",
-            new THREE.BufferAttribute(positions, 3)
-        );
+        geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
         const material = new THREE.PointsMaterial({
             color: "#00eaff",
@@ -343,12 +386,11 @@
 
         function animate() {
             requestAnimationFrame(animate);
-
             particles.rotation.y += 0.0007;
             particles.rotation.x += 0.0003;
-
             renderer.render(scene, camera);
         }
+
         animate();
 
         window.addEventListener("resize", () => {
